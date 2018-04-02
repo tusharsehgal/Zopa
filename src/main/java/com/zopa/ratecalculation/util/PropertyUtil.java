@@ -1,8 +1,5 @@
 package com.zopa.ratecalculation.util;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -10,9 +7,8 @@ import java.util.Properties;
  * Get the property value from property file.
  */
 public class PropertyUtil {
-    static Properties properties;
-
     public static final String FILE_PATH = "/rate.properties";
+    static Properties properties;
 
     static {
         properties = new Properties();

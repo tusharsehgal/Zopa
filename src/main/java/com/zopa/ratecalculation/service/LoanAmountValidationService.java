@@ -37,7 +37,8 @@ public class LoanAmountValidationService implements AmountValidationService {
     private boolean isLoanAmountWithinAllowedLimit(final int requestedAmount) {
         if (!(requestedAmount >= MIN_AMOUNT &&
                 requestedAmount <= Max_AMOUNT)) {
-            throw new RequestedAmountOutOfAllowedLimits("Requested amount should be between 1000 and 15000 both inclusive");
+            throw new RequestedAmountOutOfAllowedLimits("Requested amount should be between " +
+                    MIN_AMOUNT + " and " + Max_AMOUNT + " both inclusive");
         }
         return true;
     }

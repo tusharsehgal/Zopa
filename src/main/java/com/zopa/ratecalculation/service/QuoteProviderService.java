@@ -49,7 +49,7 @@ public class QuoteProviderService implements QuoteService {
         List<Offer> offersApplied = new ArrayList<>();
         if (offers != null) {
             if (amount > offers.stream().mapToInt(offer -> offer.getAvailableAmount()).sum()) {
-                throw new InsufficientLoanAmountException(" It is not possible to provide a quote at that time due to insufficient amount");
+                throw new InsufficientLoanAmountException("No quote can be provided at this time due to insufficient amount");
             }
             for (Offer offer : offers) {
                 if (amount < offer.getAvailableAmount()) {
