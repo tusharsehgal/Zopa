@@ -11,6 +11,9 @@ pipeline {
             stage ('Build the project '){
 
             steps{
+                echo "testing the stash"
+                sh "pwd"
+                sh "ls -la"
         def mvnHome = tool name: 'maven', type: 'maven'
                 sh "${mvnHome}/bin/mvn clean compile"
              }
